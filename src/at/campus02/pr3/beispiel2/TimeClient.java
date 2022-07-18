@@ -8,10 +8,11 @@ import java.net.Socket;
 public class TimeClient {
 
     public static void main(String[] args) {
-        System.out.println("Connecting to Server");
+
         BufferedReader bufferedReader = null;
         try {
             Socket socket = new Socket("localhost", 1111);
+            System.out.println("Connecting to Server");
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
             System.out.println("Reading from Server");
